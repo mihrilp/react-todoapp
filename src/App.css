@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.App {
+    min-width: 500px;
+    min-height: 500px;
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #C4C4C4;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+.inputTask {
+    width: 65vh;
+    height: 5vh;
+    border: none;
+    margin-right: 15px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.addButton {
+    background-color: #594D85;
+    width: 10vh;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.addButton:hover {
+    cursor: pointer;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 15px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.item {
+    flex: 1;
+}
+
+.Checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+}
+
+.trashIcon {
+    cursor: pointer;
+    color: #DD1C1A;
+}
