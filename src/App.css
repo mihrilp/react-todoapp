@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #C4C4C4;
 }
 
 .App {
@@ -10,7 +11,13 @@ body {
     min-height: 500px;
     padding: 30px;
     margin-top: 40px;
-    background-color: #C4C4C4;
+}
+
+.header {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Inter', sans-serif;
 }
 
 form {

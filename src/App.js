@@ -39,6 +39,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="header">Daily Todo List</h1>
       <form onSubmit={onSubmit}>
         <input className="inputTask" onChange={handleChange} value={todo} type="text" placeholder="Enter new task" />
         <button className="addButton">Add</button>
