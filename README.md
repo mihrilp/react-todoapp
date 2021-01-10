@@ -5,8 +5,7 @@
   <img src="https://img.shields.io/github/stars/mihrilp/react-todoapp"/>
   <img src="https://img.shields.io/static/v1?label=npm&message=v6.14.8&color=blue"/>
 <p>
-<p>My first Todo Application using ReactJs </p><br/>
-
+<p>My first Todo Application using ReactJs. </p>
 ### Screenshot <br/><br/>
 ![React App — Firefox Developer Edition 1_10_2021 1_13_10 PM (2)](https://user-images.githubusercontent.com/58886855/104124109-f3aafd00-535f-11eb-8452-b0bc3fe02462.png)
 <br/><br/>
