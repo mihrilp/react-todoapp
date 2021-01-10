@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item {
+    flex: 1;
+    display: flex;
+    margin-top: 8px;
+    padding-top: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: #d5ccf5;
+    border-radius: 50%;
+    border: 2px solid #3c096c;
+    box-sizing: border-box;
+}
+
+.container input:checked~.checkmark {
+    background-color: #3c096c;
+    opacity: 0.70;
+}
+
+.container input:checked+label {
+    text-decoration: line-through;
+    color: rgb(88, 88, 88);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hiddenIcons {
+    display: none;
+}
+
+.shownIcons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.trash {
+    margin-left: 10px;
+}
+
+.editClass {
+    display: flex;
+    align-self: center;
+}
+
+.editInput {
+    background-color: white;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+}
