@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/github/issues/mihrilp/react-todoapp"/>
   <img src="https://img.shields.io/github/forks/mihrilp/react-todoapp"/>
   <img src="https://img.shields.io/github/stars/mihrilp/react-todoapp"/>
-  <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fmihrilp%2Freact-todoapp"/>
+  <img src="https://img.shields.io/static/v1?label=npm&message=v6.14.8&color=blue"/>
 <p>
 
 
@@ -12,7 +12,7 @@
 <br/><br/>
 
 
-## Available Scripts
+## Usage
 
 In the project directory, you can run:
 
@@ -23,7 +23,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-
 
 
