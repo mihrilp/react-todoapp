@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import Item from './components/Item';
-import SmileIcon from './components/SmileIcon';
+import Item from "./components/Item";
+import SmileIcon from "./components/SmileIcon";
 
 function App() {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
   const [done, setDone] = useState([]);
+
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem("todos")) || []);
+    setDone(JSON.parse(localStorage.getItem("doneTodos")) || []);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("doneTodos", JSON.stringify(done));
+  }, [todos, done]);
 
   const addTodo = () => {
     setTodos([
@@ -45,25 +55,25 @@ function App() {
   };
 
   const handleCheck = (todo) => {
-    todo.completed = !todo.completed
+    todo.completed = !todo.completed;
     remove();
-    return todo.completed ? (setDone([
-      ...done,
-      {
-        id: done.length + 1,
-        text: todo.text,
-        completed: todo.completed,
-      },
-    ])
-    ) : (setTodos([
-      ...todos,
-      {
-        id: todos.length + 1,
-        text: todo.text,
-        completed: todo.completed,
-      },
-    ])
-      )
+    return todo.completed
+      ? setDone([
+          ...done,
+          {
+            id: done.length + 1,
+            text: todo.text,
+            completed: todo.completed,
+          },
+        ])
+      : setTodos([
+          ...todos,
+          {
+            id: todos.length + 1,
+            text: todo.text,
+            completed: todo.completed,
+          },
+        ]);
   };
 
   return (
@@ -84,7 +94,7 @@ function App() {
           <ul>
             <h3>To Do</h3>
             {todos.map((todoItem) => (
-              <li>
+              <li key={todoItem.id}>
                 <Item
                   todo={todoItem}
                   deleteTodo={deleteTodo}
@@ -93,33 +103,32 @@ function App() {
               </li>
             ))}
           </ul>
-        </div>) : (
-          console.log("there is no todo")
-        )}
+        </div>
+      ) : (
+        console.log("there is no todo")
+      )}
       {done.length > 0 ? (
         <div className="doneList">
           <ul>
             <h3>Completed</h3>
             {done.map((doneItem) => (
-              <li>
-                <Item
-                  todo={doneItem}
-                  onChange={() => handleCheck(doneItem)}
-                />
+              <li key={doneItem.id}>
+                <Item todo={doneItem} onChange={() => handleCheck(doneItem)} />
               </li>
             ))}
           </ul>
-        </div>) : (
-          console.log("there is no done")
-        )
-      }
+        </div>
+      ) : (
+        console.log("there is no done")
+      )}
       {todos.length === 0 && done.length === 0 ? (
-        <div className='noTodo'>
+        <div className="noTodo">
           <p>You have no todos today</p>
           <SmileIcon />
-        </div>) : (
-          console.log("nothing")
-        )}
+        </div>
+      ) : (
+        console.log("nothing")
+      )}
     </div>
   );
 }

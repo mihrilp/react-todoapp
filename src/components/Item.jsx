@@ -21,7 +21,7 @@ const Item = ({ todo, deleteTodo, onChange }) => {
           <label className="container">
             <input type="checkbox" id="checkbox" checked={todo.completed} onChange={onChange} />
             <label htmlFor="checkbox">{todo.text}</label>
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <div className={todo.completed ? 'hiddenIcons' : 'shownIcons'}>
             <EditIcon />
