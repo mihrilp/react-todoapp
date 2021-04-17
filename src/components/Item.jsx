@@ -1,31 +1,23 @@
 import React from "react";
 import "./Item.css";
-import EditIcon from './EditIcon';
-import TrashIcon from './TrashIcon';
+import TrashIcon from "./TrashIcon";
 
-const Item = ({ todo, deleteTodo, onChange,editTodo }) => {
+const Item = ({ todo, deleteTodo, onChange }) => {
   return (
     <div className="item" key={todo.id}>
-      {!todo.editMode ? (
-        <>
-          <label className="container">
-            <input type="checkbox" id="checkbox" checked={todo.completed} onChange={onChange} />
-            <label htmlFor="checkbox">{todo.text}</label>
-            <span className="checkmark"></span>
-          </label>
-          <div className={todo.completed ? 'hiddenIcons' : 'shownIcons'}>
-            <EditIcon buttonClick={editTodo}/>
-            <TrashIcon buttonClick={deleteTodo} className="trash" />
-          </div>
-        </>
-      ) : (
-          <>
-            <div className="editClass">
-              {//edit todo in here
-              }
-            </div>
-          </>
-        )}
+      <label className="container">
+        <input
+          type="checkbox"
+          id="checkbox"
+          checked={todo.completed}
+          onChange={onChange}
+        />
+        <label htmlFor="checkbox">{todo.text}</label>
+        <span className="checkmark"></span>
+      </label>
+      <div className="trashIcon">
+        <TrashIcon buttonClick={deleteTodo} className="trash" />
+      </div>
     </div>
   );
 };

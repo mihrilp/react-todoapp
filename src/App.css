@@ -33,20 +33,25 @@ form {
 
 .inputTask {
     width: 65vh;
-    height: 5vh;
+    height: 6vh;
     border: none;
-    margin-right: 15px;
+    padding: 15px;
     border-radius: 5px;
-    padding-left: 10px;
     border: 0.5px solid #8e9aaf;
+    margin-right: 10px;
+}
+
+input:active {
+    outline: none;
 }
 
 .addButton {
     background-color: #3c096c;
     width: 10vh;
-    height: 5vh;
+    height: 6vh;
     border: none;
     border-radius: 5px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
 }

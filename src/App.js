@@ -42,12 +42,12 @@ function App() {
 
   const editTodo = (todo) => {
     todo.editMode = !todo.editMode;
-    console.log(todo.editMode)
-  }
+    console.log(todo.editMode);
+  };
 
   const deleteTodo = (todo) => {
     const newTodos = [...todos];
-    const index = todos.indexOf(todo)
+    const index = todos.indexOf(todo);
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
@@ -79,7 +79,6 @@ function App() {
               <li key={todoItem.id}>
                 <Item
                   todo={todoItem}
-                  editTodo={() => editTodo(todoItem)}
                   deleteTodo={() => deleteTodo(todoItem)}
                   onChange={() => handleCheck(todoItem)}
                 />
@@ -88,8 +87,8 @@ function App() {
           </ul>
         </div>
       ) : (
-          console.log("there is no todo")
-        )}
+        console.log("there is no todo")
+      )}
       {complete.length > 0 ? (
         <div className="doneList">
           <ul>
@@ -98,14 +97,16 @@ function App() {
               <li key={doneItem.id}>
                 <Item
                   todo={doneItem}
-                  onChange={() => handleCheck(doneItem)} />
+                  deleteTodo={() => deleteTodo(doneItem)}
+                  onChange={() => handleCheck(doneItem)}
+                />
               </li>
             ))}
           </ul>
         </div>
       ) : (
-          console.log("there is no done")
-        )}
+        console.log("there is no done")
+      )}
       {todos.length === 0 && (
         <div className="noTodo">
           <p>You have no todos today</p>

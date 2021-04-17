@@ -74,11 +74,7 @@
     transform: rotate(45deg);
 }
 
-.hiddenIcons {
-    display: none;
-}
-
-.shownIcons {
+.trashIcon {
     flex: 1;
     display: flex;
     justify-content: flex-end;
