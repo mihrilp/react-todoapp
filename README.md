@@ -11,14 +11,14 @@
 ## ![Demo](https://dailytodolist.vercel.app/)
 
 ### Screenshot <br/><br/>
-![React App — Firefox Developer Edition 1_10_2021 5_58_49 PM](https://user-images.githubusercontent.com/58886855/104126444-a2096f00-536d-11eb-9ce4-26039fa42059.png)
+![React App — Firefox Developer Edition 4_17_2021 9_11_22 PM](https://user-images.githubusercontent.com/58886855/115122632-94ddcb00-9fc1-11eb-8f1a-09585b71ab73.png)
 <br/><br/>
 
 ## Usage
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
