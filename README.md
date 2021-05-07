@@ -11,8 +11,7 @@
 ## ![Demo](https://dailytodolist.vercel.app/)
 
 ### Screenshot <br/><br/>
-![React App — Firefox Developer Edition 4_17_2021 9_11_22 PM](https://user-images.githubusercontent.com/58886855/115122632-94ddcb00-9fc1-11eb-8f1a-09585b71ab73.png)
-<br/><br/>
+![React App — Firefox Developer Edition 5_7_2021 11_11_51 PM](https://user-images.githubusercontent.com/58886855/117503911-54eb8180-af8a-11eb-8ffe-41fc14cd0c16.png)
 
 ## Usage
 
