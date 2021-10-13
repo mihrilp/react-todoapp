@@ -109,7 +109,8 @@ function App() {
       )}
       {todos.length === 0 && (
         <div className="noTodo">
-          <p>You have no todos today</p>
+          <h2>Hooray! </h2>
+          <h2>You have no todos today.</h2>
           <SmileIcon />
         </div>
       )}
